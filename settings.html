@@ -1,0 +1,778 @@
+<!-- Guided Generations Settings Panel -->
+<div class="GuidedGenerations-Extension-settingslist">
+  <div class="inline-drawer">
+    <div class="inline-drawer-toggle inline-drawer-header">
+      <b>指导生成设置</b>
+      <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+    </div>
+    <div class="inline-drawer-content">
+      <div class="settings_section">
+        <h4>显示操作按钮</h4>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input
+              type="checkbox"
+              id="gg_showGGToolsMenuButton"
+              name="showGGToolsMenuButton"
+              class="gg-setting-input"
+            />
+            <label for="gg_showGGToolsMenuButton" style="margin-left: 8px">显示 指导生成工具菜单 (🔖)</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input type="checkbox" id="gg_showPGMenuButton" name="showPGMenuButton" class="gg-setting-input" />
+            <label for="gg_showPGMenuButton" style="margin-left: 8px">显示 持久化指导菜单 (��)</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input
+              type="checkbox"
+              id="gg_showImpersonate1stPerson"
+              name="showImpersonate1stPerson"
+              class="gg-setting-input"
+            />
+            <label for="gg_showImpersonate1stPerson" style="margin-left: 8px">显示扮演 (第一人称 👤)</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input
+              type="checkbox"
+              id="gg_showImpersonate2ndPerson"
+              name="showImpersonate2ndPerson"
+              class="gg-setting-input"
+            />
+            <label for="gg_showImpersonate2ndPerson" style="margin-left: 8px">显示扮演 (第二人称 👥)</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input
+              type="checkbox"
+              id="gg_showImpersonate3rdPerson"
+              name="showImpersonate3rdPerson"
+              class="gg-setting-input"
+            />
+            <label for="gg_showImpersonate3rdPerson" style="margin-left: 8px">显示扮演 (第三人称 🗣️)</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input
+              type="checkbox"
+              id="gg_showGuidedSwipeButton"
+              name="showGuidedSwipeButton"
+              class="gg-setting-input"
+            />
+            <label for="gg_showGuidedSwipeButton" style="margin-left: 8px">显示 指导重写最后消息 (▶️)</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input
+              type="checkbox"
+              id="gg_showGuidedResponseButton"
+              name="showGuidedResponseButton"
+              class="gg-setting-input"
+            />
+            <label for="gg_showGuidedResponseButton" style="margin-left: 8px">显示 指导下次响应</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input type="checkbox" id="gg_showGuidedContinue" name="showGuidedContinue" class="gg-setting-input" />
+            <label for="gg_showGuidedContinue" style="margin-left: 8px">显示 指导当前消息续写 (➡)</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input
+              type="checkbox"
+              id="gg_showGuidedPartialRewriteButton"
+              name="showGuidedPartialRewriteButton"
+              class="gg-setting-input"
+            />
+            <label for="gg_showGuidedPartialRewriteButton" style="margin-left: 8px">显示 指导部分重写 (🔄)</label>
+          </div>
+        </div>
+        <hr />
+        <h4>自动触发 (持久化指导)</h4>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input type="checkbox" id="gg_autoTriggerClothes" name="autoTriggerClothes" class="gg-setting-input" />
+            <label for="gg_autoTriggerClothes" style="margin-left: 8px">描述衣物</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input type="checkbox" id="gg_autoTriggerState" name="autoTriggerState" class="gg-setting-input" />
+            <label for="gg_autoTriggerState" style="margin-left: 8px">描述状态</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input type="checkbox" id="gg_autoTriggerThinking" name="autoTriggerThinking" class="gg-setting-input" />
+            <label for="gg_autoTriggerThinking" style="margin-left: 8px">描述思考</label>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <input
+              type="checkbox"
+              id="gg_enableAutoCustomAutoGuide"
+              name="enableAutoCustomAutoGuide"
+              class="gg-setting-input"
+              title="在每条发送的消息前自动触发此指导"
+            />
+            <label for="gg_enableAutoCustomAutoGuide" style="margin-left: 8px">自定义自动指导</label>
+          </div>
+        </div>
+        <hr />
+        <h4>注入设置</h4>
+        <div class="setting_item">
+          <label for="gg_injectionEndRole" style="margin-bottom: 5px; display: block">将注入内容发送为:</label>
+          <select id="gg_injectionEndRole" name="injectionEndRole" class="gg-setting-input text_pole select_compact">
+            <option value="system">系统 (System)</option>
+            <option value="assistant">助手 (Assistant)</option>
+            <option value="user">用户 (User)</option>
+          </select>
+          <small class="setting_item_description">
+            决定在生成前注入内容（如描述状态/衣物）末尾指定的角色。"系统"通常最适合用于指导，"助手"则延续流程，"用户"有时根据模型/提示词结构也可能有用。默认：系统。
+          </small>
+        </div>
+        <hr />
+        <h4>预设使用</h4>
+        <small class="setting_item_description"
+          >为不同的指导生成操作分配特定的系统提示（预设）。选择预设后，它将在指导运行前临时激活，然后取消激活。使用"GGSystemPrompt"按钮可以快速将字段填充为默认指导预设。</small
+        >
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetClothes" style="margin-left: 8px; min-width: 150px">衣物指导</label>
+            <input
+              type="text"
+              id="gg_presetClothes"
+              name="presetClothes"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetClothes" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetState" style="margin-left: 8px; min-width: 150px">状态指导</label>
+            <input
+              type="text"
+              id="gg_presetState"
+              name="presetState"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetState" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetThinking" style="margin-left: 8px; min-width: 150px">思考指导</label>
+            <input
+              type="text"
+              id="gg_presetThinking"
+              name="presetThinking"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetThinking" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_customAutoGuidePresetName" style="margin-left: 8px; min-width: 150px">自定义自动指导</label>
+            <input
+              type="text"
+              id="gg_customAutoGuidePresetName"
+              name="customAutoGuidePresetName"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button
+              type="button"
+              class="gg-preset-button"
+              data-target="customAutoGuidePresetName"
+              style="margin-left: 8px"
+            >
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetSituational" style="margin-left: 8px; min-width: 150px">情景指导</label>
+            <input
+              type="text"
+              id="gg_presetSituational"
+              name="presetSituational"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetSituational" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetRules" style="margin-left: 8px; min-width: 150px">规则指导</label>
+            <input
+              type="text"
+              id="gg_presetRules"
+              name="presetRules"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetRules" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetCustom" style="margin-left: 8px; min-width: 150px">自定义指导</label>
+            <input
+              type="text"
+              id="gg_presetCustom"
+              name="presetCustom"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetCustom" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetCorrections" style="margin-left: 8px; min-width: 150px">修正内容</label>
+            <input
+              type="text"
+              id="gg_presetCorrections"
+              name="presetCorrections"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetCorrections" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetSpellchecker" style="margin-left: 8px; min-width: 150px">拼写检查</label>
+            <input
+              type="text"
+              id="gg_presetSpellchecker"
+              name="presetSpellchecker"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetSpellchecker" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetEditIntros" style="margin-left: 8px; min-width: 150px">编辑介绍</label>
+            <input
+              type="text"
+              id="gg_presetEditIntros"
+              name="presetEditIntros"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetEditIntros" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetImpersonate1st" style="margin-left: 8px; min-width: 150px">扮演 (第一人称)</label>
+            <input
+              type="text"
+              id="gg_presetImpersonate1st"
+              name="presetImpersonate1st"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetImpersonate1st" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetImpersonate2nd" style="margin-left: 8px; min-width: 150px">扮演 (第二人称)</label>
+            <input
+              type="text"
+              id="gg_presetImpersonate2nd"
+              name="presetImpersonate2nd"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetImpersonate2nd" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetImpersonate3rd" style="margin-left: 8px; min-width: 150px">扮演 (第三人称)</label>
+            <input
+              type="text"
+              id="gg_presetImpersonate3rd"
+              name="presetImpersonate3rd"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetImpersonate3rd" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetGuidedContinue" style="margin-left: 8px; min-width: 150px">指导当前消息续写</label>
+            <input
+              type="text"
+              id="gg_presetGuidedContinue"
+              name="presetGuidedContinue"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetGuidedContinue" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetGuidedSwipe" style="margin-left: 8px; min-width: 150px">指导重写最后消息</label>
+            <input
+              type="text"
+              id="gg_presetGuidedSwipe"
+              name="presetGuidedSwipe"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button type="button" class="gg-preset-button" data-target="presetGuidedSwipe" style="margin-left: 8px">
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <div class="setting_item">
+          <div style="display: flex; align-items: center; margin-bottom: 5px">
+            <label for="gg_presetGuidedPartialRewrite" style="margin-left: 8px; min-width: 150px">指导部分重写</label>
+            <input
+              type="text"
+              id="gg_presetGuidedPartialRewrite"
+              name="presetGuidedPartialRewrite"
+              class="gg-setting-input text_pole"
+              style="flex: 1; margin-left: 8px"
+            />
+            <button
+              type="button"
+              class="gg-preset-button"
+              data-target="presetGuidedPartialRewrite"
+              style="margin-left: 8px"
+            >
+              GGSystemPrompt
+            </button>
+          </div>
+        </div>
+        <hr />
+        <div class="guide-prompt-overrides-section">
+          <h4>指导提示词覆盖</h4>
+          <small class="setting_item_description"
+            >自定义发送给 AI 的特定指导指令。使用 `{{input}}`
+            来插入原始用户文本（如果适用）。使用"默认"按钮恢复原始提示词。勾选"原始"以将提示词直接作为 STScript
+            命令发送，而非注入（高级用法）。</small
+          >
+          <div class="setting_item">
+            <label for="gg_promptClothes" style="margin-left: 8px; min-width: 150px; display: block"
+              >衣物指导提示词</label
+            >
+            <textarea
+              id="gg_promptClothes"
+              name="promptClothes"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button type="button" class="gg-default-button" data-target="promptClothes" style="margin-top: 4px">
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptClothes"
+                name="rawPromptClothes"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptClothes" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptState" style="margin-left: 8px; min-width: 150px; display: block"
+              >状态指导提示词</label
+            >
+            <textarea
+              id="gg_promptState"
+              name="promptState"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button type="button" class="gg-default-button" data-target="promptState" style="margin-top: 4px">
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptState"
+                name="rawPromptState"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptState" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptThinking" style="margin-left: 8px; min-width: 150px; display: block"
+              >思考指导提示词</label
+            >
+            <textarea
+              id="gg_promptThinking"
+              name="promptThinking"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button type="button" class="gg-default-button" data-target="promptThinking" style="margin-top: 4px">
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptThinking"
+                name="rawPromptThinking"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptThinking" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_customAutoGuidePrompt" style="margin-left: 8px; min-width: 150px; display: block"
+              >自定义自动指导提示词</label
+            >
+            <textarea
+              id="gg_customAutoGuidePrompt"
+              name="customAutoGuidePrompt"
+              class="gg-setting-input text_pole"
+              rows="3"
+              placeholder="在此输入自定义提示词……（留空以禁用覆盖）"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button
+                type="button"
+                class="gg-default-button"
+                data-target="customAutoGuidePrompt"
+                style="margin-top: 4px"
+              >
+                默认 (空)
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptCustomAuto"
+                name="rawPromptCustomAuto"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptCustomAuto" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptSituational" style="margin-left: 8px; min-width: 150px; display: block"
+              >情景指导提示词</label
+            >
+            <textarea
+              id="gg_promptSituational"
+              name="promptSituational"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button type="button" class="gg-default-button" data-target="promptSituational" style="margin-top: 4px">
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptSituational"
+                name="rawPromptSituational"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptSituational" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptRules" style="margin-left: 8px; min-width: 150px; display: block"
+              >规则指导提示词</label
+            >
+            <textarea
+              id="gg_promptRules"
+              name="promptRules"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button type="button" class="gg-default-button" data-target="promptRules" style="margin-top: 4px">
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptRules"
+                name="rawPromptRules"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptRules" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptCorrections" style="margin-left: 8px; min-width: 150px; display: block"
+              >修正内容提示词</label
+            >
+            <textarea
+              id="gg_promptCorrections"
+              name="promptCorrections"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button type="button" class="gg-default-button" data-target="promptCorrections" style="margin-top: 4px">
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptCorrections"
+                name="rawPromptCorrections"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptCorrections" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptSpellchecker" style="margin-left: 8px; min-width: 150px; display: block"
+              >拼写检查提示词</label
+            >
+            <textarea
+              id="gg_promptSpellchecker"
+              name="promptSpellchecker"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button type="button" class="gg-default-button" data-target="promptSpellchecker" style="margin-top: 4px">
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptSpellchecker"
+                name="rawPromptSpellchecker"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptSpellchecker" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptImpersonate1st" style="margin-left: 8px; min-width: 150px; display: block"
+              >扮演 (第一人称) 提示词</label
+            >
+            <textarea
+              id="gg_promptImpersonate1st"
+              name="promptImpersonate1st"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <button type="button" class="gg-default-button" data-target="promptImpersonate1st" style="margin-top: 4px">
+              默认
+            </button>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptImpersonate2nd" style="margin-left: 8px; min-width: 150px; display: block"
+              >扮演 (第二人称) 提示词</label
+            >
+            <textarea
+              id="gg_promptImpersonate2nd"
+              name="promptImpersonate2nd"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <button type="button" class="gg-default-button" data-target="promptImpersonate2nd" style="margin-top: 4px">
+              默认
+            </button>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptImpersonate3rd" style="margin-left: 8px; min-width: 150px; display: block"
+              >扮演 (第三人称) 提示词</label
+            >
+            <textarea
+              id="gg_promptImpersonate3rd"
+              name="promptImpersonate3rd"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <button type="button" class="gg-default-button" data-target="promptImpersonate3rd" style="margin-top: 4px">
+              默认
+            </button>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptGuidedContinue" style="margin-left: 8px; min-width: 150px; display: block"
+              >指导当前消息续写提示词</label
+            >
+            <textarea
+              id="gg_promptGuidedContinue"
+              name="promptGuidedContinue"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button
+                type="button"
+                class="gg-default-button"
+                data-target="promptGuidedContinue"
+                style="margin-top: 4px"
+              >
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptGuidedContinue"
+                name="rawPromptGuidedContinue"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptGuidedContinue" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptGuidedResponse" style="margin-left: 8px; min-width: 150px; display: block"
+              >指导下次响应提示词</label
+            >
+            <textarea
+              id="gg_promptGuidedResponse"
+              name="promptGuidedResponse"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button
+                type="button"
+                class="gg-default-button"
+                data-target="promptGuidedResponse"
+                style="margin-top: 4px"
+              >
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptGuidedResponse"
+                name="rawPromptGuidedResponse"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptGuidedResponse" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptGuidedSwipe" style="margin-left: 8px; min-width: 150px; display: block"
+              >指导重写最后消息提示词</label
+            >
+            <textarea
+              id="gg_promptGuidedSwipe"
+              name="promptGuidedSwipe"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button type="button" class="gg-default-button" data-target="promptGuidedSwipe" style="margin-top: 4px">
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptGuidedSwipe"
+                name="rawPromptGuidedSwipe"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptGuidedSwipe" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+          <div class="setting_item">
+            <label for="gg_promptGuidedPartialRewrite" style="margin-left: 8px; min-width: 150px; display: block"
+              >指导部分重写提示词</label
+            >
+            <textarea
+              id="gg_promptGuidedPartialRewrite"
+              name="promptGuidedPartialRewrite"
+              class="gg-setting-input text_pole"
+              rows="3"
+              style="width: 100%; margin-left: 8px; min-width: 200px"
+            ></textarea>
+            <div style="display: flex; align-items: center; margin-top: 4px">
+              <button
+                type="button"
+                class="gg-default-button"
+                data-target="promptGuidedPartialRewrite"
+                style="margin-top: 4px"
+              >
+                默认
+              </button>
+              <input
+                type="checkbox"
+                id="gg_rawPromptGuidedPartialRewrite"
+                name="rawPromptGuidedPartialRewrite"
+                class="gg-setting-input"
+                style="margin-left: 8px"
+              />
+              <label for="gg_rawPromptGuidedPartialRewrite" style="margin-left: 4px">原始</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
