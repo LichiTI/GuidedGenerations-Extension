@@ -1,6 +1,6 @@
 {
     "name": "GuidedGenerations",
-    "display_name": "ZHCN Guided Generations Extension",
+    "display_name": "Guided Generations Extension",
     "loading_order": 100,
     "requires": [],
     "optional": [],
@@ -8,6 +8,6 @@
     "css": "style.css",
     "author": "Samuel Eiras",
     "description": "ZHCN-Translation",
-    "version": "1.3.3",
+    "version": "1.3.4",
     "manifest_version": 3
 }
