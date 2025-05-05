@@ -12,6 +12,7 @@ import { recoverInput } from './scripts/inputRecovery.js';
 import { simpleSend } from './scripts/simpleSend.js';
 // Import the new Update Character function
 // Import the new Custom Auto Guide
+import { editLastMessage } from './scripts/editLastMessage.js'; // Import the new edit function
 // Import necessary functions/objects from SillyTavern
 import { extension_settings, getContext } from '../../../extensions.js';
 // Import Preset Manager
@@ -54,6 +55,7 @@ export const defaultSettings = {
   showGuidedResponseButton: true, // NEW: Show the Guided Response button
   showGuidedContinue: false,
   showGuidedPartialRewriteButton: false, // NEW: Show the Guided Partial Rewrite button
+  showEditLastMessageButton: false, // NEW: Setting for the Edit Last Message button
 
   // Auto Triggers
   autoTriggerClothes: false,
@@ -793,6 +795,17 @@ function updateExtensionButtons() {
       guidedPartialRewrite,
     ); // Change Icon: ✒️ -> 🔄
     actionButtonsContainer.appendChild(guidedPartialRewriteButton);
+  }
+
+  // NEW: Edit Last Message Button
+  if (settings.showEditLastMessageButton) {
+    const editLastMessageButton = createActionButton(
+      'gg_edit_last_message_button', // New unique ID
+      '编辑最后消息', // Tooltip text
+      'fa-solid fa-pencil-alt', // FontAwesome icon class (fa-pencil-alt is common)
+      editLastMessage, // Function to call on click
+    );
+    actionButtonsContainer.appendChild(editLastMessageButton);
   }
 }
 
